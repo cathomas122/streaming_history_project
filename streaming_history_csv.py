@@ -118,9 +118,8 @@ streaming_history_clean = streaming_history[~streaming_history['id'].isnull()] #
 # -------------------------------------------------------------------------- #
 #
 # CREATE CSV FILES
+# comment out in order to prevent the data file being tampered with unless absolutely necessary 
 #
 # -------------------------------------------------------------------------- #
-is_null.to_csv('is_null.csv', index = False) # missing songs
-
-# comment out in order to prevent the data file being tampered with unless absolutely necessary 
+# is_null.to_csv('is_null.csv', index = False) # missing songs
 # streaming_history_clean.to_csv('streaming_history.csv', index = False) # write to csv

@@ -32,14 +32,12 @@ pd.set_option('max_columns', None)
 
 spotify_url = 'https://api.spotify.com/v1'
 
-client_id = '8af7373ce2f94ec8841b199abd81321c'
+client_id = ''
 
-client_secret = 'fb480348d1d44e8994e47234254a30a6'
+client_secret = ''
 
 redirect_uri = 'https://cathomas.georgetown.domains/ANLY560/AboutMe.html'
 
-# client_credentials_manager = SpotifyClientCredentials(client_id = client_id, 
-                                                      # client_secret = client_secret)
 scope = 'user-library-read'
 
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id = client_id,
@@ -123,32 +121,6 @@ streaming_history_clean = streaming_history[~streaming_history['id'].isnull()] #
 #
 # -------------------------------------------------------------------------- #
 is_null.to_csv('is_null.csv', index = False) # missing songs
-streaming_history_clean.to_csv('streaming_history.csv', index = False) # write to csv
 
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# comment out in order to prevent the data file being tampered with unless absolutely necessary 
+# streaming_history_clean.to_csv('streaming_history.csv', index = False) # write to csv

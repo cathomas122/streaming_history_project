@@ -72,9 +72,9 @@ pd.set_option('max_columns', None)
 
 spotify_url = 'https://api.spotify.com/v1'
 
-client_id = '86519bf4cf3e4d258b5d102a86732510' # 86519bf4cf3e4d258b5d102a86732510
+client_id = '' 
 
-client_secret = 'b07ea5ec997442f6abac1f594c74c22b' # b07ea5ec997442f6abac1f594c74c22b
+client_secret = '' 
 
 redirect_uri = 'https://cathomas.georgetown.domains/ANLY560/AboutMe.html'
 
@@ -475,7 +475,4 @@ def update_time_series(dropdown_feature):
       
 if __name__ == '__main__':
     app.run_server(debug=True)
-    
-
-
-
+ 

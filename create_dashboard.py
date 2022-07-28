@@ -64,27 +64,6 @@ from dash import Dash, html, dcc, Input, Output
 
 pd.set_option('max_columns', None)
 
-# -------------------------------------------------------------------------- #
-#
-# SET UP ACCESS TO SPOTIFY API
-# 
-# -------------------------------------------------------------------------- #
-
-spotify_url = 'https://api.spotify.com/v1'
-
-client_id = '' 
-
-client_secret = '' 
-
-redirect_uri = 'https://cathomas.georgetown.domains/ANLY560/AboutMe.html'
-
-scope = 'user-library-read'
-
-sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id = client_id,
-                                               client_secret = client_secret,
-                                               redirect_uri = redirect_uri,
-                                               scope=scope))
-
 complete_df = pd.read_csv('combined_df.csv')
 measures = ['valence', 'energy', 'mode', 'danceability', 'key', 'tempo']
 

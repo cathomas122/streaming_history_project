@@ -62,8 +62,6 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 
 from dash import Dash, html, dcc, Input, Output 
 
-pd.set_option('max_columns', None)
-
 complete_df = pd.read_csv('combined_df.csv')
 measures = ['valence', 'energy', 'mode', 'danceability', 'key', 'tempo']
 
